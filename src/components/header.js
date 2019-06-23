@@ -88,7 +88,11 @@ class Header extends Component {
             </div>
             <ul className="header-btn" style={{ display: (isWidth? 'block':'none')}}>
               <li>About</li>
-              <li>Github</li>
+              <li>
+                <a href="https://github.com/Chestermozhao" target="_blank">
+                  Github
+                </a>
+              </li>
             </ul>
           </div>
         </header>

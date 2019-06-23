@@ -17,7 +17,7 @@ const IndexPage = (props) => {
             </div>
             <hr className="line-type1" />
             <span className="date-span">{node.frontmatter.date}</span>
-            <p>{node.excerpt.split('\n').slice(0,2)}</p>
+            <p>{node.excerpt.split('-').slice(0, 1)}</p>
           </div>
         </Link>
       ))}
@@ -34,7 +34,7 @@ export const listQuery = graphql`
           fields{
             slug
           }
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 200)
           frontmatter {
             date(formatString: "MMMM Do YYYY")
             title

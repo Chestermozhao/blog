@@ -33,6 +33,11 @@
   line-height: 2.7em;
 }
 
+.header-btn li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .header-burger {
   color: #FFF;
   font-size: 1.6em;
