@@ -3,6 +3,8 @@ import React, {Component} from "react"
 import EarthImage from '../images/earth_img.jpg'
 import "./header.css"
 import { Link } from 'gatsby'
+import window from 'global'
+
 
 class Header extends Component {
     constructor(props) {
