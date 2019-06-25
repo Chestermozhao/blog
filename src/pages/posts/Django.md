@@ -3,7 +3,7 @@ title: "Django With Python3.6"
 description: practice django by doc
 date: '2019-06-27'
 tags: ['Python']
-image: ''
+image: 'empty.png'
 ---
 ### Django with Python3.6-
 - install

@@ -47,10 +47,10 @@ export const query = graphql`
         description
         image {
           childImageSharp {
-            resize(width: 1500, height: 1500) {
+            resize(width: 16, height: 16) {
               src
             }
-            fluid(maxWidth: 786) {
+            fluid(maxWidth: 16) {
               ...GatsbyImageSharpFluid
             }
           }
