@@ -40,6 +40,7 @@ template {
   display: none;
 }
 a {
+  color: black;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -90,9 +91,11 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
+pre {
+  background-color: black
+}
 code,
 kbd,
-pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -619,4 +622,21 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.gatsby-highlight {
+  background-color: #091E42;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left;
+  min-width: 100%;
 }

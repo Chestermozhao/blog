@@ -47,3 +47,7 @@ a {
     margin-bottom: 0.3rem;
     color: #444242;
 }
+
+.noteContent a {
+    text-decoration: none;
+}

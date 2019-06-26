@@ -17,7 +17,7 @@ const IndexPage = (props) => {
             </div>
             <hr className="line-type1" />
             <span className="date-span">{node.frontmatter.date}</span>
-            <p>{node.excerpt.split('-').slice(0, 1)}</p>
+            <p>{node.excerpt.split(' ').slice(0, 1)}</p>
           </div>
         </Link>
       ))}

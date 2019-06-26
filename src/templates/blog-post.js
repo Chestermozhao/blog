@@ -1,66 +1,54 @@
 import React from 'react';
 import Layout from '../components/layout';
-import Img from 'gatsby-image';
 import Metatags from '../components/Metatags';
 import { graphql } from 'gatsby'
+import "../pages/post.css"
+
+
 function BlogPost(props) {
-    let Img_;
-    let thumbnail;
     const post = props.data.markdownRemark;
     const url = props.data.site.siteMetadata.siteUrl;
+    const date = post.frontmatter.date;
     const { title } = post.frontmatter;
     const { description } = post.frontmatter;
-    const image_exist = post.frontmatter.image
-    if (image_exist) {
-        thumbnail = image_exist.childImageSharp.resize.src;
-        Img_ = <Img fluid={post.frontmatter.image.childImageSharp.fluid}/>
-    } else {
-        thumbnail = image_exist
-        Img_ = ""
+    const image = post.frontmatter.image;
+    let thumbnail = url;
+    if(image){
+        thumbnail += image.childImageSharp.resize.src;
     }
     return (
         <Layout>
             <Metatags
                 title={title}
                 description={description}
-                thumbnail={url + thumbnail}
+                thumbnail={thumbnail}
                 url={url}
                 pathname={props.location.pathname}
             />
-            <div>
+            <div className="noteContent">
                 <h1>{title}</h1>
-                {Img_}
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <h4 style={{color: '#ab7878'}}>{date}</h4>
             </div>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </Layout>
     )
 }
 
 export default BlogPost;
-
 export const query = graphql`
- query PostQuery($slug: String!) {
-     markdownRemark(fields: { slug: { eq: $slug } }) {
-       html
-       frontmatter {
-        title
-        description
-        image {
-          childImageSharp {
-            resize(width: 16, height: 16) {
-              src
+    query PostQuery($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            html
+            frontmatter {
+                title
+                description
+                date(formatString: "MMMM Do YYYY")
             }
-            fluid(maxWidth: 16) {
-              ...GatsbyImageSharpFluid
+        }
+        site {
+            siteMetadata {
+                siteURL
             }
-          }
-       }
-       }
-   }
-  site {
-    siteMetadata {
-        siteUrl
-      }
-   }
-}
+        }
+    }
 `
