@@ -1,10 +1,10 @@
 ---
-title: "Webpack 讀書筆記"
+title: "Webpack Note"
 description: webpack note
 date: '2019-07-11'
 tags: ['Javascript']
 ---
-## Webpack深入淺出 閱讀筆記: 一個壓縮打包的建構工具？&nbsp;
+## Webpack深入淺出閱讀筆記：一個壓縮打包的建構工具？ &nbsp;
 ### 構建工具:
 - 功能:
     - 代碼轉換: ES6 -> ES5 / SCSS -> CSS
