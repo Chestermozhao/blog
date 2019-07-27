@@ -183,8 +183,11 @@ tags: ['Javascript']
 ---
 ### Loader vs Plugin
 ![https://i.stack.imgur.com/P7hTM.png](https://i.stack.imgur.com/P7hTM.png)
-- Loader: [`加載某些資源文件。因為webpack本身只能打包commonjs規範的js文件，對於其他資源例如 css，圖片，或者其他的語法集，比如jsx，coffee，是沒有辦法加載的。這就需要對應的loader將資源轉化，加載進來。從字面意思也能看出，loader是用於加載的，它作用於一個個文件上。`](https://blog.csdn.net/wp270280522/article/details/51496436)
-- Plugin: [`擴展webpack的功能。它直接作用於 webpack，擴展了它的功能。當然loader也時變相的擴展了 webpack ，但是它只專注於轉化文件（transform）這一個領域。而plugin的功能更加的豐富，而不僅局限於資源的加載。`](https://blog.csdn.net/wp270280522/article/details/51496436)
+
+- [Loader](https://blog.csdn.net/wp270280522/article/details/51496436): 加載某些資源文件。因為webpack本身只能打包commonjs規範的js文件，對於其他資源例如 css，圖片，或者其他的語法集，比如jsx，coffee，是沒有辦法加載的。這就需要對應的loader將資源轉化，加載進來。從字面意思也能看出，loader是用於加載的，它作用於一個個文件上。
+
+- [Plugin](https://blog.csdn.net/wp270280522/article/details/51496436): 擴展webpack的功能。它直接作用於 webpack，擴展了它的功能。當然loader也時變相的擴展了 webpack ，但是它只專注於轉化文件（transform）這一個領域。而plugin的功能更加的豐富，而不僅局限於資源的加載。
+
 ---
 ### [常用工具webpack配置介紹](http://webpack.wuhaolin.cn/3%E5%AE%9E%E6%88%98/3-1%E4%BD%BF%E7%94%A8ES6%E8%AF%AD%E8%A8%80.html)
 - [Babel](https://www.babeljs.cn/docs/babel-preset-react): ES6 -> ES5
