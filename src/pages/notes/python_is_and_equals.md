@@ -4,7 +4,6 @@ description: 說說Python的logic operator
 date: '2020-01-19'
 tags: ['Python']
 ---
-## Python的==跟is大不同
 身為Python後端工程師, 使用邏輯運算子是再平常不過的場景了, 再寫東西的時候喜歡判斷None的時候用is, 其他時候使用==來判斷是否相等, 但不過都沒仔細了解下兩種運算子的差異, 今天這篇小筆記就記錄下這兩種運算子的差異吧！
 
 ---
@@ -86,22 +85,22 @@ tags: ['Python']
 - dis results
   - 這邊可以看見2, 3在`LOAD_CONST`都是從位址0讀取的, 所以id一致
   ```
-    2           0 LOAD_CONST               0 ('1 2')
-                2 STORE_NAME               0 (i)
-  
-    3           4 LOAD_CONST               0 ('1 2')
-                6 STORE_NAME               1 (j)
-  
-    5           8 LOAD_CONST               1 (<code object f at 0x00000200F257CF60, file "small_int.py", line 5>)
-               10 LOAD_CONST               2 ('f')
-               12 MAKE_FUNCTION            0
-               14 STORE_NAME               2 (f)
-               16 LOAD_CONST               3 (None)
-               18 RETURN_VALUE
-  
-  Disassembly of <code object f at 0x00000200F257CF60, file "small_int.py", line 5>:
-    6           0 LOAD_CONST               0 (None)
-                2 RETURN_VALUE
+      2         0 LOAD_CONST               0 ('1 2')
+                  2 STORE_NAME               0 (i)
+    
+      3         4 LOAD_CONST               0 ('1 2')
+                  6 STORE_NAME               1 (j)
+    
+      5         8 LOAD_CONST               1 (<code object f at 0x00000200F257CF60, file "small_int.py", line 5>)
+                 10 LOAD_CONST               2 ('f')
+                 12 MAKE_FUNCTION            0
+                 14 STORE_NAME               2 (f)
+                 16 LOAD_CONST               3 (None)
+                 18 RETURN_VALUE
+    
+      Disassembly of <code object f at 0x00000200F257CF60, file "small_int.py", line 5>:
+      6         0 LOAD_CONST               0 (None)
+                  2 RETURN_VALUE
   ```
 
 ---
